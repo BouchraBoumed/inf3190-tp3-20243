@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Formulaire d'inscription</title>
+		<link rel="stylesheet" href="formulaire_style.css">
+	</head>
+	<body>
+	    <h1> <u> Formulaire de mise en adoption </u></h1>
+        <p id="p1">
+			Ce formulaire permet de soumettre un animal pour mise en adoption. Veuillez remplir les informations demandées de manière complète et précise. Assurez-vous que tous les champs sont correctement remplis avant de soumettre votre demande. Nous vous remercions pour votre contribution à l'adoption responsable des animaux.
+		</p>
+
+        <br>
+
+        <!-- <form id="adoption-form" action="/mettre_en_adoption" method="POST"> -->
+        <form id="formulaireAdoption" >
+
+            <div>
+	            <label for="nom">Nom de l'animal :</label>
+	            <input type="text" id="nom" name="nom" required>
+	            <span id="nomErreur" >Le nom doit contenir entre 3 et 20 caractères ainsi qu'aucune virgule.</span>
+	        </div>
+
+
+            <div>
+                <label for="espece">Espèce :</label>
+                <input type="text" id="espece" name="espece" required>
+                <span id="especeErreur">Le nom de l'espèce ne doit pas contenir de virgule.</span>
+            </div>
+
+            <div>
+                <label for="race">Race :</label>
+                <input type="text" id="race" name="race" required>
+                <span id="raceErreur">Le nom de la race ne doit pas contenir de virgule.</span>
+            </div>
+
+            <div>
+                <label for="age">Âge :</label>
+                <input type="number" id="age" name="age" required >
+                <span id="ageErreur">L'âge doit être un nombre entre 0 et 30.</span>
+            </div>
+
+            <div>
+                <label for="description">Description :</label>
+                <textarea id="description" name="description" required></textarea>
+                <span id="descriptionErreur">La description est obligatoire et ne devrait contenir aucune virgule.</span>
+            </div>
+
+            <div>
+                <label for="courriel">Adresse courriel :</label>
+                <input type="email" id="courriel" name="courriel" required>
+                <span id="courrielErreur">L'adresse courriel doit être valide.</span>
+            </div>
+
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+                <span id="adresseErreur">L'adresse doit etre valide ne contenant aucune virgule.</span>
+            </div>
+
+            <div>
+                <label for="ville">Ville :</label>
+                <input type="text" id="ville" name="ville" required>
+                <span id="villeErreur">La ville ne doit pas contenir de virgule.</span>
+            </div>
+
+            <div>
+                <label for="cp">Code postal :</label>
+                <input type="text" id="cp" name="cp" required>
+                <span id="cpErreur">Le code postal doit avoir un format valide et aucune virgule.</span>
+            </div>
+
+            <button type="submit">Soumettre</button>
+
+        </form>
+
+         <script src="formulaire_script.js"></script>
+
+	</body>
+</html>
