@@ -1,4 +1,9 @@
 # inf3190-tp3-20243
+Noms des auteurs: 
+Bouchra Boumedien BOUB81590205 groupe 40
+Suzane Benhabiles 
 
-Mettre ici les noms et codes permanents des auteurs, ainsi que les instructions
+
+
+ainsi que les instructions
 pour installer et exécuter le logiciel.
