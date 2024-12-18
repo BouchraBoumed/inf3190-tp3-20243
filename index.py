@@ -75,7 +75,7 @@ def animal_detail(animal_id):
     db = get_db()
     animal = db.get_animal(animal_id)
     if animal:
-        return render_template('profil-animal.html', animal=animal)
+        return render_template('profil_animal.html', animal=animal)
     return "Animal pas trouvé", 404
 
 #Route pour l'affichage aleratoire dans la page d'acceuil
