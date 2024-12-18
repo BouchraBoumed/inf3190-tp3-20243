@@ -19,7 +19,7 @@ from flask import jsonify
 import random
 
 from requests import request
-from .database import Database
+from database import Database
 
 app = Flask(__name__, static_url_path="", static_folder="static")
 
