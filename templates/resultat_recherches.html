@@ -22,14 +22,27 @@
             <a href="/form">Faire adopter un animal</a>
         </nav>
 
-        <!-- affichage aleatoire des animaux-->
         <main>
-            <div id="random-animals"></div>
+            <div id="resultats-recherches">
+                {% if animals %}
+                    {% for animal in animals %}
+                        <div class="animal-card">
+                            <h2>{{ animal.nom }}</h2>
+                            <p>{{ animal.description }}</p>
+                            <a href="/animal/{{ animal.id }}">Détails</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-results-message">
+                        Aucun animal trouvé correspondant à vos critères de recherche.
+                    </div> 
+                {% endif %}
+            </div>
         </main>
-            
+
         <footer>
             <p>&copy;  2024 Centre Pattopia . Tous Les Droits Reserves.</p>
         </footer>
-        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
     </body>
-    </html>
+</html>

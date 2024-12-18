@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Formulaire d'inscription</title>
-		<link rel="stylesheet" href="formulaire_style.css">
-	</head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pattopia </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
 	<body>
         <header>
-            <a href="index.html">acceuil</a>
-            <a href="adopter.html">Adopter un animal</a>
-            <a href="form.html">Faire adopter un animal</a>
-            <a href="#a-propos">A propos</a>
+            <h1>Pattopia</h1>
+            <p>Trouves ton compagnon a quatres pattes parfait aujourd'hui !</p>
+            <form id="search-form" action="/search" method="get">
+                <input type="text" id="search-query" name="query" placeholder="Recherchez des animaux...">
+                <button type="submit">Recherche</button>
+            </form>
         </header>
+        <nav>
+            <a href="=/">">acceuil</a>
+            <a href="/adopter">Adopter un animal</a>
+            <a href="/form">Faire adopter un animal</a>
+        </nav>
+        
 	    <h1> <u> Formulaire de mise en adoption </u></h1>
         <p id="p1">
 			Ce formulaire permet de soumettre un animal pour mise en adoption. Veuillez remplir les informations demandées de manière complète et précise. Assurez-vous que tous les champs sont correctement remplis avant de soumettre votre demande. Nous vous remercions pour votre contribution à l'adoption responsable des animaux.
@@ -83,6 +92,9 @@
         </form>
 
          <script src="formulaire_script.js"></script>
+         <footer>
+            <p>&copy;  2024 Centre Pattopia . Tous Les Droits Reserves.</p>
+        </footer>
 
 	</body>
 </html>

@@ -21,15 +21,19 @@
             <a href="/adopter">Adopter un animal</a>
             <a href="/form">Faire adopter un animal</a>
         </nav>
-
-        <!-- affichage aleatoire des animaux-->
         <main>
-            <div id="random-animals"></div>
+            <div class="profil-animal">
+                <h1>{{ animal.nom }}</h1>
+                <p>Espèce : {{ animal.espece }}</p>
+                <p>Race : {{ animal.race }}</p>
+                <p>Âge : {{ animal.age }}</p>
+                <p>Description : {{ animal.description }}</p>
+                <p>Courriel : <a href="mailto:{{ animal.courriel }}">{{ animal.courriel }}</a></p>
+                <p>Localisation : {{ animal.adresse }}, {{ animal.ville }}, {{ animal.cp }}</p>
+            </div>
         </main>
-            
         <footer>
             <p>&copy;  2024 Centre Pattopia . Tous Les Droits Reserves.</p>
         </footer>
-        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
     </body>
     </html>
